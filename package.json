@@ -1,0 +1,37 @@
+{
+  "name": "in-development-blog",
+  "version": "0.0.1",
+  "description": "This is a Blog which can be used to publish posts.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "dev": "webpack-dev-server --port 5000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://rodrigo-morais@github.com/rodrigo-morais/in-development-blog.git"
+  },
+  "keywords": [
+    "Elm",
+    "Blog"
+  ],
+  "author": "Rodrigo Morais <morais.rm@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rodrigo-morais/in-development-blog/issues"
+  },
+  "homepage": "https://github.com/rodrigo-morais/in-development-blog#readme",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "file-loader": "^0.8.5",
+    "css-loader": "^0.23.1",
+    "style-loader": "^0.13.1",
+    "elm-webpack-loader": "^2.0.1",
+    "webpack": "^1.12.14",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-dev-server": "^1.14.1",
+    "no-export-loader": "^1.0.0"
+  }
+}
