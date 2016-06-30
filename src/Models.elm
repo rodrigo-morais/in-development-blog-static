@@ -15,6 +15,7 @@ type alias PostStatic =
   , size : String
   , url : String
   , content : String
+  , encoding : String
   }
 
 

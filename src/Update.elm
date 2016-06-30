@@ -1,6 +1,9 @@
 module Update exposing (..)
 
 
+import Base64
+
+
 import Routing.Models exposing (..)
 import Routing.Config exposing (routerConfig)
 import Routing.Utils exposing (reverse, navigationCmd)
@@ -29,11 +32,16 @@ update msg model =
       let
         p = 
           (Debug.log ("FetchPostSucceed -> " ++ post.sha))
-          post.content
+          Base64.decode post.content
+
+        pStr =
+          case p of
+            Ok post -> (toString post)
+            Err _ -> ""
       in
-        ( { model | post = p }
-        , Cmd.none
-        )
+        case p of
+            Ok post -> ( { model | post = post }, Cmd.none )
+            Err _ -> ( model, Cmd.none )
 
     FetchPostsFail _ ->
       (Debug.log "FetchPostsFail")

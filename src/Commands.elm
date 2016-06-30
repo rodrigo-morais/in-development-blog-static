@@ -42,9 +42,10 @@ decodePost =
 
 decodePostStatic : Json.Decoder PostStatic
 decodePostStatic =
-  Json.object4
+  Json.object5
     PostStatic
     ("sha" := Json.string)
     ("size" := Json.string)
     ("url" := Json.string)
     ("content" := Json.string)
+    ("encoding" := Json.string)
